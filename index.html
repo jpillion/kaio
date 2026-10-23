@@ -56,6 +56,8 @@
     text-decoration: none; font-weight: 600; padding: 13px 20px; border-radius: 10px; margin: 10px 0 4px;
   }
   .phone .join svg { width: 18px; height: 18px; fill: #fff; }
+  .phone h2 .logo { height: 22px; width: auto; fill: currentColor; }
+  .phone h2 .logo.android { fill: #3DDC84; height: 24px; }
   .phone footer { color: var(--muted); font-size: 14.5px; margin-top: 34px; text-align: center; }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -74,38 +76,40 @@
     html, body { height: 100%; overflow: hidden; }
     .slide {
       display: grid; height: 100vh; width: 100vw;
-      grid-template-rows: auto 1fr auto; gap: 3vh; padding: 4.5vh 5vw;
+      grid-template-rows: auto 1fr auto; gap: 2.4vh; padding: 3.6vh 5vw;
     }
     .slide header { display: flex; align-items: center; gap: 2.2vw; }
-    .slide header img { height: 10vh; width: 10vh; border-radius: 2.2vh; }
-    .slide h1 { font-size: 6.6vh; line-height: 1; margin: 0; }
-    .slide .sub { font-size: 3vh; color: var(--muted); margin: 0.8vh 0 0; }
-    .slide .step { font-size: 3.2vh; font-weight: 700; margin: 0 0 1.6vh; }
+    .slide header img { height: 8.4vh; width: 8.4vh; border-radius: 1.9vh; }
+    .slide h1 { font-size: 5.6vh; line-height: 1; margin: 0; }
+    .slide .sub { font-size: 2.6vh; color: var(--muted); margin: 0.6vh 0 0; }
+    .slide .step { font-size: 3vh; font-weight: 700; margin: 0 0 1.2vh; }
     .slide .step span { color: var(--navy); }
     .slide .install { display: flex; flex-direction: column; min-height: 0; }
     .slide .right { display: grid; grid-template-columns: 1fr 2fr; gap: 2vw; flex: 1; min-height: 0; }
     .slide .platform {
       background: var(--card); border: 1px solid var(--line); border-radius: 2.4vh;
-      padding: 2.4vh 1.6vw; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1.8vh 1.6vw; display: flex; flex-direction: column; align-items: center; justify-content: center;
     }
-    .slide .platform h3 { font-size: 3.2vh; margin: 0 0 1.6vh; }
+    .slide .platform h3 { font-size: 3vh; margin: 0 0 1vh; }
     .slide .qrs { display: flex; gap: 3vw; }
     .slide figure { margin: 0; display: flex; flex-direction: column; align-items: center; }
-    .slide figure .qr { height: 25vh; width: 25vh; image-rendering: pixelated; }
-    .slide figure .badge { height: 7.4vh; margin: 0.6vh 0 -1.2vh; }
-    .slide figure .badge.apple { height: 4.6vh; margin: 1.9vh 0 0.2vh; }
+    .slide figure .qr { height: 21vh; width: 21vh; image-rendering: pixelated; }
+    .slide figure .badge { height: 6.6vh; margin: 0.4vh 0 -1.2vh; }
+    .slide figure .badge.apple { height: 4.2vh; margin: 1.5vh 0 0.2vh; }
     .slide .join-note { display: inline-flex; align-items: center; background: #000; color: #fff;
       border-radius: 0.8vh; padding: 0 1.4vw; font-size: 2.2vh; font-weight: 600; }
     .slide .platform h3 { display: flex; align-items: center; gap: 0.7vw; }
-    .slide .logo { height: 3vh; width: auto; fill: currentColor; }
-    .slide figcaption { font-size: 2.5vh; color: var(--muted); text-align: center; margin-top: 1.2vh; line-height: 1.3; }
-    .slide figcaption strong { color: var(--fg); display: block; font-size: 2.8vh; }
+    .slide .logo { height: 3.4vh; width: auto; fill: currentColor; }
+    .slide .logo.android { fill: #3DDC84; height: 3.8vh; }
+    .slide .why { font-size: 2.2vh; color: var(--muted); text-align: center; margin: -0.4vh 0 1.4vh; max-width: 54vw; line-height: 1.3; }
+    .slide figcaption { font-size: 2.2vh; color: var(--muted); text-align: center; margin-top: 1vh; line-height: 1.25; }
+    .slide figcaption strong { color: var(--fg); display: block; font-size: 2.5vh; }
     .slide .enter {
       display: flex; align-items: center; justify-content: space-between; gap: 3vw;
-      background: var(--card); border: 1px solid var(--line); border-radius: 2.4vh; padding: 2.4vh 2.4vw;
+      background: var(--card); border: 1px solid var(--line); border-radius: 2.4vh; padding: 1.8vh 2.4vw;
     }
     .slide .enter p { font-size: 3.2vh; margin: 0; line-height: 1.35; }
-    .slide .enter .code { font-size: 9vh; line-height: 1; padding: 2.2vh 3vw; margin: 0; white-space: nowrap; }
+    .slide .enter .code { font-size: 8.4vh; line-height: 1; padding: 1.8vh 3vw; margin: 0; white-space: nowrap; }
   }
 </style>
 </head>
@@ -125,24 +129,26 @@
     <p class="step"><span>1.</span> Scan to install the app</p>
     <div class="right">
       <div class="platform">
-        <h3>Android</h3>
+        <h3><svg class="logo android" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Android</h3>
         <figure>
           <img class="qr" src="./qr-google-play.svg" alt="QR code: Google Play">
           <span class="badge"><img src="./google-play-badge.png" alt="Get it on Google Play"></span>
+          <figcaption><strong>Install from Google Play</strong>CBSSA: Bible School Schedules</figcaption>
         </figure>
       </div>
       <div class="platform">
         <h3><svg class="logo" viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>iPhone</h3>
+        <p class="why">Waiting for App Store approval, so for now it installs through <strong>TestFlight</strong>, Apple's free app for testing new apps.</p>
         <div class="qrs">
           <figure>
             <img class="qr" src="./qr-testflight-app.svg" alt="QR code: TestFlight on the App Store">
             <span class="badge apple"><img src="./app-store-badge.svg" alt="Download TestFlight on the App Store"></span>
-            <figcaption><strong>a. Install TestFlight</strong></figcaption>
+            <figcaption><strong>a. Install TestFlight</strong>Apple's free app</figcaption>
           </figure>
           <figure>
             <img class="qr" src="./qr-join-beta.svg" alt="QR code: join the beta">
             <span class="badge apple join-note">Join the beta</span>
-            <figcaption><strong>b. Then join the beta</strong></figcaption>
+            <figcaption><strong>b. Then join the beta</strong>installs Bible School Schedules</figcaption>
           </figure>
         </div>
       </div>
@@ -174,7 +180,7 @@
 
 
   <section>
-    <h2>Android</h2>
+    <h2><svg class="logo android" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Android</h2>
     <a class="badge play" href="https://play.google.com/store/apps/details?id=com.quillandcedar.cbssa">
       <img src="./google-play-badge.png" alt="Get it on Google Play"></a>
     <ol>
@@ -184,9 +190,10 @@
   </section>
 
   <section>
-    <h2>iPhone <span class="tag">Beta</span></h2>
-    <p>The iPhone app is waiting for App Store approval. Until then, install it through Apple's
-      free <strong>TestFlight</strong> app.</p>
+    <h2><svg class="logo" viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>iPhone <span class="tag">Beta</span></h2>
+    <p>The iPhone app is still waiting for App Store approval. Until it's approved, it installs
+      through <strong>TestFlight</strong>, Apple's free app for testing new apps. So it's two
+      steps: install TestFlight, then join the beta, which installs Bible School Schedules.</p>
     <ol>
       <li>Install TestFlight from the App Store:<br>
         <a class="badge" href="https://apps.apple.com/app/testflight/id899247664">
