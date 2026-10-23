@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camp Kaio — schedule app</title>
+<meta name="description" content="The Camp Kaio schedule, duty rosters and cabins on your phone. Works with no signal.">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="theme-color" content="#2E5C8A">
+<style>
+  :root {
+    --navy: #2E5C8A; --navy-light: #D3E3F4; --amber: #FFE8B8; --on-amber: #3D2A00;
+    --bg: #FBFAF8; --card: #fff; --line: #E4E1DB;
+    --fg: #1A1A18; --muted: #5A5850;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #9FC6EE; --navy-light: #25486C; --amber: #574200; --on-amber: #FFE8B8;
+      --bg: #14130F; --card: #1E1D19; --line: #35332C;
+      --fg: #F2F0EA; --muted: #B5B2A8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 32px 20px 72px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+  header img { width: 68px; height: 68px; border-radius: 15px; }
+  h1 { font-size: 27px; margin: 0; line-height: 1.15; }
+  .sub { color: var(--muted); margin: 2px 0 0; }
+  .lede { color: var(--muted); margin: 20px 0 28px; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px 22px; margin-bottom: 18px;
+  }
+  h2 { font-size: 20px; margin: 0 0 4px; display: flex; align-items: center; gap: 9px; }
+  h2 .tag {
+    font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+    background: var(--navy-light); color: var(--navy); padding: 3px 8px; border-radius: 6px;
+  }
+  @media (prefers-color-scheme: dark) { h2 .tag { color: var(--amber-on, #D3E3F4); } }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p { margin: 8px 0; }
+  ol, ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--navy); }
+  .btn {
+    display: inline-block; background: var(--navy); color: #fff; text-decoration: none;
+    font-weight: 600; padding: 13px 22px; border-radius: 11px; margin: 12px 8px 4px 0;
+  }
+  @media (prefers-color-scheme: dark) { .btn { color: #11314F; } }
+  .btn.secondary { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+  .note {
+    background: var(--amber); color: var(--on-amber); border-radius: 10px;
+    padding: 12px 15px; margin: 14px 0; font-size: 15.5px;
+  }
+  .meta { color: var(--muted); font-size: 14.5px; }
+  footer { color: var(--muted); font-size: 14.5px; margin-top: 34px; text-align: center; }
+  code { background: var(--navy-light); color: var(--fg); padding: 1px 6px; border-radius: 5px; font-size: 14.5px; }
+  .code {
+    font: 700 34px/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .16em;
+    background: var(--navy-light); color: var(--navy); border-radius: 12px;
+    padding: 16px 18px; text-align: center; margin: 12px 0 6px; user-select: all;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="./icon-512.png" alt="">
+    <div>
+      <h1>Camp Kaio</h1>
+      <p class="sub">Camp Kaio 2 · Friday Oct. 23 – Sunday Oct. 25, 2026</p>
+    </div>
+  </header>
+
+  <p class="lede">
+    The whole weekend on your phone: every meal, Bible reading and activity, who is leading
+    each one, the duty rosters and the cabin list. It shows what is on right now and what is
+    next, and once it's loaded it works with no signal at all.
+  </p>
+
+  <section>
+    <h2>Your access code</h2>
+    <p>After you install the app, tap <strong>Add a schedule</strong> and enter:</p>
+    <div class="code">URB85W</div>
+    <p class="meta">The code loads Camp Kaio 2. Enter it once, while you have a signal.</p>
+  </section>
+
+  <section>
+    <h2>Android</h2>
+    <p>The app is on Google Play.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.quillandcedar.cbssa">Get it on Google Play</a>
+    <ol>
+      <li>Install <strong>CBSSA: Bible School Schedules</strong> from Google Play.</li>
+      <li>Open it and enter the access code above.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>iPhone <span class="tag">Beta</span></h2>
+    <p>The iPhone app is waiting for App Store approval. Until then, install it through Apple's
+      <strong>TestFlight</strong> app — it's free and takes a minute.</p>
+    <a class="btn secondary" href="https://apps.apple.com/app/testflight/id899247664">1. Get TestFlight</a>
+    <a class="btn" href="https://testflight.apple.com/join/AqGKDrWW">2. Join the beta</a>
+    <ol>
+      <li>Install <strong>TestFlight</strong> from the App Store.</li>
+      <li>Open the <strong>Join the beta</strong> link on your iPhone, tap <strong>Accept</strong>,
+        then <strong>Install</strong>.</li>
+      <li>Open <strong>Bible School Schedules</strong> and enter the access code above.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p><a href="https://jpillion.github.io/bible-school-schedules/privacy.html">Privacy</a></p>
+    <p>No accounts, no adverts, no tracking.</p>
+  </footer>
+
+</div>
+</body>
+</html>
